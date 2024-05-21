@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-Pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex007</title>
+    <style>
+        body{
+            text-align: center;
+        }
+
+         #btn-wrap{
+            margin-top: 10pt;
+            padding: 0px 10px 10px 10px;
+        }
+
+        #btn1{
+            background-color: black;
+            color: wheat;
+            border-radius: 2pt;
+        }
+
+        #btn1:hover{
+            background-color: grey;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" id="txtn1" name="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <br>
+    <div id="btn-wrap"><input type="button" value="Somar" id="btn1"></div>
+
+    <div id="res"></div>
+
+    <script>
+        btn1.addEventListener('click', somar)
+        
+        function somar(){
+            let tn1=document.querySelector('#txtn1')
+            let tn2=document.querySelector('#txtn2')
+            let restxt=document.querySelector('#res')
+            let n1= Number(tn1.value)
+            let n2= Number(tn2.value)
+            let res= n1+n2
+            restxt.innerHTML=`O resultado é ${res}`
+        }
+    </script>
+</body>
+</html>
