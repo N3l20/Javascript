@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex010</title>
+    <style>
+        #Res{
+            margin: 5px;
+            padding: 1pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>País onde mora</h1>
+    <input type="text" name="país" id="país">
+    <input type="button" value="Confirmar" onclick="conf()">
+    <div id="Res"></div>
+    <script>
+        function conf(){
+            let pTxt=document.querySelector('#país')
+            
+            if (pTxt.value=='Portugal'){
+                document.querySelector('#Res').innerHTML=`Você  é Português`
+            }else{
+                document.querySelector('#Res').innerHTML=`Você é estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
